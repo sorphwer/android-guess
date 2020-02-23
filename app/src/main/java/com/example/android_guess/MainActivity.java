@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(MainActivity.this, Integer.toString(test), Toast.LENGTH_SHORT).show();
                 }
 
-                //TODO
+
                 break;
             case R.id.back_button:
                 checkButton.setBackgroundResource(R.drawable.button_guess);
