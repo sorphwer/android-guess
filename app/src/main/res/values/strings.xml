@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">android-guess</string>
+    <string name="title">The computer only considers a number from 1 to 9999</string>
+    <string name="lower">Your guess is lower!</string>
+    <string name="higher">Your guess is higher!\</string>
+    <string name="success">You got it!</string>
 </resources>
