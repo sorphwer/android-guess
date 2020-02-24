@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();//remove ActionBar
         r = new Random();
         test=r.nextInt(9999)+1;
         //Toast.makeText(MainActivity.this, Integer.toString(test), Toast.LENGTH_SHORT).show();
