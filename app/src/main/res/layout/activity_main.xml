@@ -29,17 +29,22 @@
         android:layout_marginRight="50px"
         android:textAlignment="center"
         android:gravity="center"
+
+
         />
 
     <EditText
+        android:letterSpacing="0.1"
         android:id="@+id/input_EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="145dp"
+        android:width="150dp"
         android:gravity="end"
         android:hint="####"
-        android:background="@color/white"
+        android:background="@drawable/stroke_partly"
         android:textSize="60sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
 
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/guess_button"
@@ -51,10 +56,11 @@
 
         ></EditText>
     <TextView
+        android:letterSpacing="0.1"
         android:id="@+id/result_TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="145dp"
+        android:width="150dp"
         android:textColor="@color/black"
         android:gravity="end"
 
@@ -82,7 +88,7 @@
 
         android:text="Check"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="33sp"
         android:textAllCaps="false"
 
         android:layout_marginTop="100px"
@@ -108,7 +114,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="0dp">
         <Button
             android:id="@+id/upButton"
             android:clickable="false"

@@ -2,6 +2,7 @@ package com.example.android_guess;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int temp;
     private int test=1234;
     private Random r;
+    private Typeface consola;
+
 
     private String guessText;//save the value from main layout.
 
@@ -37,10 +40,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();//remove ActionBar
+
+
+        //remove ActionBar
+        getSupportActionBar().hide();
+
+        //init random number
         r = new Random();
         test=r.nextInt(9999)+1;
-        //Toast.makeText(MainActivity.this, Integer.toString(test), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, Integer.toString(test), Toast.LENGTH_SHORT).show();
 
         //bind Component
         checkButton=findViewById(R.id.guess_button);
@@ -51,6 +59,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         backButton=findViewById(R.id.back_button);
         upButton=findViewById(R.id.upButton);
         downButton=findViewById(R.id.downButton);
+
+
+
+        //set fonts
+        consola=Typeface.createFromAsset(getAssets(),"fonts/consola.ttf");
+        //hint.setTypeface(consola);
+        inputText.setTypeface(consola);
+        resultText.setTypeface(consola);
 
         //Set listener
         checkButton.setOnClickListener(this);
@@ -140,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     backButton.setVisibility(View.VISIBLE);
                     backButton.setEnabled(true);
                     test=r.nextInt(9999)+1;
-                   // Toast.makeText(MainActivity.this, Integer.toString(test), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, Integer.toString(test), Toast.LENGTH_SHORT).show();
                 }
 
 
